@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Products {% endblock %}
+{% block content %}
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'codered/css/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'codered/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'codered/css/font-awesome.min.css' %}">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{% static 'codered/css/templatemo-style.css' %}">
+		<script src="{% static 'codered/js/jquery.js' %}"></script>
+		<script src="{% static 'codered/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'codered/js/jquery.singlePageNav.min.js' %}"></script>
+		<script src="{% static 'codered/js/typed.js' %}"></script>
+		<script src="{% static 'codered/js/wow.min.js' %}"></script>
+		<script src="{% static 'codered/js/custom.js' %}"></script>
+	</head>
+	<body id="top">
+    	<section id="team">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>AWESOME</span> PRODUCTS</h2>
+    				</div>
+                    {% for i in product %}
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+							<a href="{{i.get_url}}">
+    						<img src="{{i.img.url}}" class="img-responsive" alt="team img 1"></a>
+    							<div class="team-des">
+    							<h4>{{i.name}}</h4>
+    							<span>{{i.price}}</span>
+    						</div>
+    				    </div>
+    				</div>
+					{% endfor %}
+    			</div>
+    		</div>
+    	</section>
+		{% if product.has_previous %}
+		<a href="?page1">&laquo; First</a>
+		<a href="?page={{product.parevious_page_number}}">Previous</a>
+		{% endif %}
+		Page {{product.number}} of {{product.paginator.num_pages}}
+		{% if product.has_next %}
+		<a href="?page={{product.next_page_number}}">Next</a>
+		<a href="?page={{product.paginator.num_pages}}">Last&raquo;</a>
+		{% endif %}
+	</body>
+</html>
+{% endblock %}

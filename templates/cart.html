@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% block title %}Cart {% endblock %}
+{% block content %}
+{% load static %}
+	<link rel="stylesheet" href="{% static 'stylecart/css/main.css' %}">
+    <div class="cart-wrap bg-dark" >
+		  <a class="btn text-white" style="background-color: #03e9f4;" href="{% url 'product' %}" role="button">
+			<i class="fas fa-shopping-bag"></i>
+		  </a>
+		<div class="container">
+	        <div class="row">
+			    <div class="col-lg-8">
+			        <div class="table-cart">
+	                    <table>
+	                        <thead>
+	                            <tr>
+	                                <th>Product</th>
+	                                <th>Quantity</th>
+	                                <th>Total</th>
+	                                <th></th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+								{% for i in ci %}
+	                            <tr>
+	                                <td>
+	                                	<div class="display-flex align-center">
+		                                    <div class="img-product">
+		                                        <img src="{{i.prod.img.url}}" alt="" class="mCS_img_loaded">
+		                                    </div>
+		                                    <div class="name-product">
+												{{i.prod.name}}
+		                                        <br>G2356
+		                                    </div>
+		                                    <div class="price">
+												&#x20B9;{{i.prod.price}}
+		                                    </div>
+	                                    </div>
+	                                </td>
+									
+	                                <td class="product-count">
+	                                    <form action="#" class="count-inlineflex">
+											<a href="{% url 'mincart' i.prod.id %}">
+										        <div class="qtyminus">-</div>
+											</a>
+										    <input type="text" name="quantity" value="{{i.quan}}" class="qty">
+									    	<a href="{% url 'addcart' i.prod.id %}" >
+										        <div class="qtyplus">+</div>
+									    	</a>
+										</form>
+	                                </td>
+	                                <td>
+	                                    <div class="total">
+	                                        &#x20B9;{{i.total}}
+	                                    </div>
+	                                </td>
+	                                <td>
+										<a class="btn text-white" style="background-color: #ed302f; " href="{% url 'remove' i.prod.id %}" role="button">
+											<i class="fas fa-remove-format "></i>
+										  </a>
+	                                </td>
+	                            </tr>
+								{% endfor %}
+	                        </tbody>
+	                    </table>
+	                    <div class="coupon-box">
+	                        <form action="#" method="get" accept-charset="utf-8">
+	                            <div class="coupon-input">
+	                                <input type="text" name="coupon code" placeholder="Coupon Code">
+	                                <button type="submit" class="round-black-btn">Apply Coupon</button>
+	                            </div>
+	                        </form>
+	                    </div>
+			        </div>
+			    </div>
+			    <div class="col-lg-4">
+			        <div class="cart-totals">
+			            <h3>Cart Totals</h3>
+			            <form action="#" method="get" accept-charset="utf-8">
+			                <table>
+			                    <tbody>
+			                        <tr>
+			                            <td>Subtotal</td>
+			                            <td class="subtotal">&#x20B9;2.00</td>
+			                        </tr>
+			                        <tr>
+			                            <td>Shipping</td>
+			                            <td class="free-shipping">&#x20B9;40</td>
+			                        </tr>
+			                        <tr class="total-row">
+			                            <td>Total</td>
+			                            <td class="price-total">&#x20B9;{{t}}</td>
+			                        </tr>
+			                    </tbody>
+			                </table>
+			                <div class="btn-cart-totals">
+			                    <a href="#" class="update round-black-btn" title="">Update Cart</a>
+			                    <a href="#" class="checkout round-black-btn" title="">Proceed to Checkout</a>
+			                </div>
+			            </form>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<script src="{% static 'stylecart/js/main.js' %}"></script>
+    {% endblock %}

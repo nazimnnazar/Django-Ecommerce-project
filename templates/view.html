@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block title %}Product View | {% endblock %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <link href="{% static 'codeblue/css/styles.css' %}" rel="stylesheet" />
+        <section class="py-5 bg- rgb(35, 22, 59);">    
+            <a class="btn text-white" style="background-color: #0099ff;" href="{% url 'product' %}" role="button">
+                <i class="fas fa-shopping-bag me-2"></i>
+                Products
+              </a>  
+              <a class="btn text-white" style="background-color: #ff4500;" href="{% url 'cart_Details' %}" role="button">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+              
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{product.img.url}}" alt="..." /></div>
+                    <div class="col-md-6">
+                        <!-- <div class="small mb-1">{{product.name}}</div> -->
+                        <h1 class="display-5 fw-bolder">{{product.name}}</h1>
+                        <h2 class="fs-5 mb-5">&#x20B9;{{product.price}}</h2>
+                        <h3 class="bg- rgb(0, 72, 128)">Discription:</h3> 
+                        <p class="lead">{{product.desc}}</p>
+                        <a href="{% url 'addcart' product.id %}">
+                        <div class="d-flex bg- rgb(0, 72, 128)">
+                            <button type="button" class="btn btn-info">Add to cart</button>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <a class="btn text-white" style="background-color: #55acee;" href="#!" role="button">
+                <i class="fas fa-shopping-bag"></i>
+              </a>
+              
+            <button type="button" class="btn btn-primary btn-lg btn-floating">
+                <i class="fas fa-shopping-bag"></i>
+              </button> -->
+
+              <!-- <a class="btn text-white" style="background-color: #55acee;" href="{% url 'product' %}" role="button">
+                <i class="fas fa-shopping-bag me-2"></i>
+                Products
+              </a> -->
+        </section>
+        <section class="py-5 bg- rgb(35, 22, 59);">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="fw-bolder mb-4">Room Service</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="{% static 'codeblue/img/na1.jpg' %}" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Fancy Room</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>                            <!-- Product image-->
+                            <img class="card-img-top" src="{% static 'codeblue/img/na2.jpg' %}" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Special Room</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">                         
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <img class="card-img-top" src="{% static 'codeblue/img/na3.png' %}" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Sale Room</h5>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="{% static 'codeblue/img/na4.jpg' %}" alt="..." />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Popular Room</h5>                           
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="{% static 'codeblue/js/scripts.js' %}"></script>
+    </body>
+</html>
+{% endblock %}
