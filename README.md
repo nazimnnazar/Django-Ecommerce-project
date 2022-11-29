@@ -10,7 +10,7 @@
  </div>
  
 # N gadgets eCommerce project
-## About<p><img src="https://user-images.githubusercontent.com/112808009/204589019-9f088a40-8671-419d-bef2-4886fcdc667b.png" width="1100"></p>
+## About<p><img src="https://user-images.githubusercontent.com/112808009/204589019-9f088a40-8671-419d-bef2-4886fcdc667b.png" width="110"></p>
 
 re
 ## Demo
