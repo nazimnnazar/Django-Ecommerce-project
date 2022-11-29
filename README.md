@@ -11,8 +11,9 @@
  
 # N gadgets eCommerce project
 ## About<p><img src="https://user-images.githubusercontent.com/112808009/204589019-9f088a40-8671-419d-bef2-4886fcdc667b.png" width="110"></p>
+N gadgets is an ecommerce website to provide customers can buy Computer gadgets. Implements the functioning of an E-commerce Website that performs various functions like sign up, logout, add to cart, products searching and much more.
 
-re
+
 ## Demo
 
 ## Features
