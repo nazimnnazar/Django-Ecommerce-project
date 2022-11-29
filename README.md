@@ -10,8 +10,13 @@
  </div>
  
 # N gadgets eCommerce project
+## About
+<p><img src="https://user-images.githubusercontent.com/112808009/204583121-a8e82984-8955-493a-88a2-fd8a421ca073.png" width="100"></p>
+## Demo
 
-
+## Features
 
 ## Questions
 If you have any questions mail me 
+
+## ScreenShot
