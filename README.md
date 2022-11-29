@@ -17,6 +17,35 @@ N gadgets is an ecommerce website to provide customers can buy Computer gadgets.
 ## Demo
 
 ## Features
+- Register an new account, and log in as an existing user.
+- Only People with admin account can add other products.
+- Display products with details about them .
+- Search products using keyword and/or category.
+- Add product to shopping cart and ability to remove it.
+- Add product to their wishlist and ability to remove it.
+- Review product and give feedback about it.
+- See reviews about products from other users.
+- See all products in user's shopping cart or wishlist.
+- Sign out or delete user's account.
+- Provide Support through help center.
+- Add user's shipping address.
+- Track status of user's orders.
+### Admins can do the following:
+Login or logout to the admin panel
+- View all the information stored in the database. 
+- They can view/add/edit/delete orders, users, products and categories.
+- The cart model cannot be modified by an admin because a cart is either modified by the logged in user before the purchase or deleted after the purchase.
+## products
+- productCode (String)
+- name (String)
+- slug (String)
+- title (String)
+- imagePath (String)
+- description (String)
+- price (Integer)
+- category (ObjectId - a reference to the category schema)
+- available (Boolean)
+- stock(Integer)
 
 ## Questions
 If you have any questions mail me 
