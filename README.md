@@ -23,7 +23,7 @@ N gadgets is an ecommerce website to provide customers can buy Computer gadgets.
 - Search products using keyword and/or category.
 - Add product to shopping cart and ability to remove it.
 - Add product to their wishlist and ability to remove it.
-- Review product and give feedback about it.
+- Review product and give feedback about it,
 - See reviews about products from other users.
 - See all products in user's shopping cart or wishlist.
 - Sign out or delete user's account.
