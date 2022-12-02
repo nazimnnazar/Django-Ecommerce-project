@@ -55,8 +55,4 @@ If you have any questions mail me
 ![Screenshot (260)](https://user-images.githubusercontent.com/112808009/205331766-29423c18-109f-4ece-a7a6-56a7eda1b4e1.png)
 ![Screenshot (269)](https://user-images.githubusercontent.com/112808009/205332077-f416a815-cdeb-4d89-8a75-2fddda2689a8.png)
 ![Screenshot (270)](https://user-images.githubusercontent.com/112808009/205332112-2c2f4c30-1614-47a8-9cd7-e53820c6c7b4.png)
-![Screenshot (271)](https://user-images.githubusercontent.com/112808009/205332121-725c8b5c-8989-4638-9475-e25c4bf5d432.png)
-]()
-
-![Screenshot (267)](https://user-images.githubusercontent.com/112808009/205331898-74ec8ed3-a933-4398-aa67-d911e9db93a8.png)
 ![Screenshot (268)](https://user-images.githubusercontent.com/112808009/205332000-04be09c1-fba4-4719-bc38-a5065695e233.png)
